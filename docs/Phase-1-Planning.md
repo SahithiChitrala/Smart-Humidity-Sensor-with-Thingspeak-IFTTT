@@ -17,7 +17,7 @@ Read temperature and humidity from a DHT22 sensor using an ESP32.
 | DATA | GPIO 4 |
 | GND | GND |
 
-## Result
+## Results
 
 Successfully measured:
 
