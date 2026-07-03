@@ -56,28 +56,13 @@ This project is being developed in multiple phases to understand embedded system
 
 ## 🚀 Development Roadmap
 
-### ✅ Phase 1
+## Project Progress
 
-* Project setup
-* ESP32 configuration
-* DHT22 hardware interfacing
-
-### ⏳ Phase 2
-
-* Read temperature and humidity
-* Display values on Serial Monitor
-
-### ⏳ Phase 3
-
-* OLED display integration
-
-### ⏳ Phase 4
-
-* Cloud integration using ThingSpeak
-
-### ⏳ Phase 5
-
-* IFTTT notification system
+- ✅ Phase 1 - DHT22 Sensor Interfacing
+- ⏳ Phase 2 - OLED Display
+- ⏳ Phase 3 - ThingSpeak Cloud
+- ⏳ Phase 4 - IFTTT Alerts
+- ⏳ Phase 5 - Documentation & Final Testing
 
 ---
 
