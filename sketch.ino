@@ -1,78 +1,157 @@
 #include <Wire.h>
+
 #include <Adafruit_GFX.h>
+
 #include <Adafruit_SSD1306.h>
+
 #include <DHT.h>
 
+
+
 // -------------------- DHT22 --------------------
+
 #define DHTPIN 4
+
 #define DHTTYPE DHT22
+
+
 
 DHT dht(DHTPIN, DHTTYPE);
 
+
+
 // -------------------- OLED --------------------
+
 #define SCREEN_WIDTH 128
+
 #define SCREEN_HEIGHT 64
+
+
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
+
+
 // -------------------- Setup --------------------
+
 void setup() {
+
+
 
   Serial.begin(115200);
 
+
+
   dht.begin();
 
+
+
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+
     Serial.println("OLED initialization failed");
+
     while (true);
+
   }
+
+
 
   display.clearDisplay();
+
   display.display();
+
 }
 
+
+
 // -------------------- Loop --------------------
+
 void loop() {
 
+
+
   // Read sensor values
+
   float temperature = dht.readTemperature();
+
   float humidity = dht.readHumidity();
 
+
+
   // Check if reading failed
+
   if (isnan(temperature) || isnan(humidity)) {
+
     Serial.println("Failed to read from DHT22!");
+
     delay(2000);
+
     return;
+
   }
 
+
+
   // -------- Serial Monitor --------
+
   Serial.print("Temperature: ");
+
   Serial.print(temperature);
+
   Serial.println(" °C");
 
+
+
   Serial.print("Humidity: ");
+
   Serial.print(humidity);
+
   Serial.println(" %");
+
+
 
   Serial.println("----------------");
 
+
+
   // -------- OLED Display --------
+
   display.clearDisplay();
 
+
+
   display.setTextSize(2);
+
   display.setTextColor(SSD1306_WHITE);
 
-  display.setCursor(0, 0);
-  display.print("Temp:");
-  display.print(temperature);
-  display.print("C");
 
-  display.setCursor(0, 30);
-  display.print("Hum:");
-  display.print(humidity);
-  display.print("%");
+
+  display.setCursor(0, 0);
+
+  display.print("Temp: ");
+
+  display.print(temperature, 1);
+
+  display.println(" C");
+
+
+
+display.setCursor(0, 32);
+
+
+
+display.print("Hum : ");
+
+display.print(humidity, 1);
+
+display.println(" %");
+
+
 
   display.display();
 
+
+
   delay(2000);
+
 }
