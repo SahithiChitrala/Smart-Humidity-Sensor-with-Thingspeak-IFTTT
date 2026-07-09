@@ -121,3 +121,11 @@ Through this project, I aim to strengthen my understanding of:
 * Digital Communication
 * IoT Fundamentals
 * Real-Time Monitoring Systems
+
+  ## Current Development Status
+
+### Phase 2 – OLED Display
+
+- ✅ OLED hardware integrated
+- ✅ Display code implemented
+- ⏳ Awaiting verification (Wokwi build servers unavailable)
