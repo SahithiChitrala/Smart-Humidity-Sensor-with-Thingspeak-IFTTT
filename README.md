@@ -142,3 +142,23 @@ Through this project, I aim to strengthen my understanding of:
 ⬜ Phase 4 – IFTTT Notifications
 
 ⬜ Phase 5 – Final Documentation
+
+
+
+## Current Progress
+
+### Phase 1 ✅
+- ESP32 setup
+- DHT22 sensor interfacing
+- Serial Monitor output
+
+### Phase 2 ✅
+- SSD1306 OLED integration
+- Temperature display
+- Humidity display
+
+### Phase 3 🔄
+- ThingSpeak account configured
+- Cloud integration in progress
+
+
