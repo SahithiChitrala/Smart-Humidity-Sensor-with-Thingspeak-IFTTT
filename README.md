@@ -128,4 +128,17 @@ Through this project, I aim to strengthen my understanding of:
 
 - ✅ OLED hardware integrated
 - ✅ Display code implemented
-- ⏳ Awaiting verification (Wokwi build servers unavailable)
+<img width="551" height="636" alt="Screenshot 2026-07-16 134042" src="https://github.com/user-attachments/assets/6f09698b-0c00-423c-a1ba-e81a129e322f" />
+
+
+  ## Project Progress
+
+✅ Phase 1 – DHT22 Sensor Interfacing
+
+✅ Phase 2 – OLED Display Integration
+
+⬜ Phase 3 – ThingSpeak Cloud Integration
+
+⬜ Phase 4 – IFTTT Notifications
+
+⬜ Phase 5 – Final Documentation
