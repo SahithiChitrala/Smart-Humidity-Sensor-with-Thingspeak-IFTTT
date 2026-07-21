@@ -137,7 +137,7 @@ Through this project, I aim to strengthen my understanding of:
 
 ✅ Phase 2 – OLED Display Integration
 
-⬜ Phase 3 – ThingSpeak Cloud Integration
+✅ Phase 3 – ThingSpeak Cloud Integration
 
 ⬜ Phase 4 – IFTTT Notifications
 
@@ -156,6 +156,15 @@ Through this project, I aim to strengthen my understanding of:
 - SSD1306 OLED integration
 - Temperature display
 - Humidity display
+
+  ## Features
+
+- Reads temperature and humidity using DHT22
+- Displays readings on SSD1306 OLED
+- Connects to Wi-Fi
+- Uploads sensor data to ThingSpeak
+- Displays HTTP response status in Serial Monitor
+- Updates cloud data every 20 seconds
 
 ### Phase 3 🔄
 - ThingSpeak account configured
