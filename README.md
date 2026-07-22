@@ -1,173 +1,91 @@
-# 🌦️ Smart Weather Monitoring System using ESP32
+# Smart Weather Monitoring System
 
-## 📖 Overview
+An IoT-based weather monitoring system developed using ESP32, DHT22, SSD1306 OLED, and ThingSpeak Cloud.
 
-The Smart Weather Monitoring System is an IoT-based embedded systems project that measures environmental temperature and humidity using a DHT22 sensor connected to an ESP32 microcontroller. The collected data will be displayed locally and later transmitted to cloud platforms for remote monitoring and analysis.
+## Features
 
-This project is being developed in multiple phases to understand embedded systems, sensor interfacing, communication protocols, and IoT technologies.
-
----
-
-## 🎯 Objectives
-
-* Measure real-time temperature and humidity
-* Interface the DHT22 sensor with ESP32
-* Display readings on the Serial Monitor
-* Display readings on an OLED display
-* Log sensor data for future analysis
-* Upload data to ThingSpeak Cloud
-* Generate notifications using IFTTT
+- Real-time temperature monitoring
+- Real-time humidity monitoring
+- SSD1306 OLED display
+- Wi-Fi connectivity using ESP32
+- Cloud data logging using ThingSpeak
+- HTTP GET communication
+- Live cloud dashboard
+- Serial monitor debugging
 
 ---
 
-## 🛠️ Hardware Components
+## Hardware Used
 
-* ESP32 Development Board
-* DHT22 Temperature & Humidity Sensor
-* SSD1306 OLED Display
-* Breadboard
-* Jumper Wires
-* USB Cable
+- ESP32 Development Board
+- DHT22 Temperature & Humidity Sensor
+- SSD1306 OLED Display
 
 ---
 
-## 📚 Concepts Covered
+## Software Used
 
-### Embedded Systems
-
-* ESP32 Architecture
-* GPIO Configuration
-* Digital Sensors
-
-### Communication Protocols
-
-* I²C
-* SPI
-* Wi-Fi
-
-### IoT
-
-* HTTP GET Requests
-* JSON Data
-* ThingSpeak
-* IFTTT
+- Arduino IDE
+- Wokwi Simulator
+- ThingSpeak Cloud
+- ESP32 Arduino Core
 
 ---
 
-## System Architecture
+## Working Principle
 
-```text
-        DHT22
-          │
-          ▼
-      ESP32 DevKit
-      ├──────────────┐
-      ▼              ▼
- Serial Monitor   SSD1306 OLED
-                       │
-                       ▼
-          (Future) ThingSpeak Cloud
-                       │
-                       ▼
-               IFTTT Notifications
-```
-
-### Current Progress
-
-- ✅ DHT22 Sensor Interfacing
-- ✅ Temperature Reading
-- ✅ Humidity Reading
-- ✅ Serial Output
-- ✅ OLED Hardware Integration
-- ⏳ OLED Display Testing
-- ⏳ ThingSpeak Integration
-- ⏳ IFTTT Alerts
+1. ESP32 connects to Wi-Fi.
+2. Reads temperature and humidity from DHT22.
+3. Displays readings on OLED.
+4. Creates an HTTP GET request.
+5. Uploads data to ThingSpeak.
+6. ThingSpeak stores the data.
+7. Live graphs are updated every 20 seconds.
 
 ---
 
-## 📂 Repository Structure
+## Project Architecture
 
-```text
-smart-weather-monitoring-system/
-│
-├── README.md
-├── sketch.ino
-├── diagram.json
-├── images/
-└── docs/
-```
-
----
-
-## 📈 Current Status
-
-Project initialization completed.
-
-Currently working on:
-
-* ESP32 setup
-* DHT22 interfacing
-* Understanding sensor communication
+Environment
+↓
+DHT22 Sensor
+↓
+ESP32
+├── OLED Display
+├── Serial Monitor
+└── Wi-Fi
+      ↓
+HTTP GET Request
+      ↓
+ThingSpeak Cloud
+      ↓
+Live Dashboard
 
 ---
 
-## 🎯 Learning Outcomes
+## Learning Outcomes
 
-Through this project, I aim to strengthen my understanding of:
+- ESP32 Programming
+- Sensor Interfacing
+- OLED Display
+- Wi-Fi Communication
+- HTTP Protocol
+- ThingSpeak API
+- IoT Cloud Integration
+- Embedded Systems Programming
 
-* Embedded Systems
-* ESP32 Programming
-* Sensor Interfacing
-* Digital Communication
-* IoT Fundamentals
-* Real-Time Monitoring Systems
+---
 
-  ## Current Development Status
+## Future Improvements
 
-### Phase 2 – OLED Display
+- Email Alerts
+- Mobile Notifications
+- MQTT Support
+- Data Logging to SD Card
+- Weather Forecast Integration
 
-- ✅ OLED hardware integrated
-- ✅ Display code implemented
-<img width="551" height="636" alt="Screenshot 2026-07-16 134042" src="https://github.com/user-attachments/assets/6f09698b-0c00-423c-a1ba-e81a129e322f" />
+---
 
+## Author
 
-  ## Project Progress
-
-✅ Phase 1 – DHT22 Sensor Interfacing
-
-✅ Phase 2 – OLED Display Integration
-
-✅ Phase 3 – ThingSpeak Cloud Integration
-
-⬜ Phase 4 – IFTTT Notifications
-
-⬜ Phase 5 – Final Documentation
-
-
-
-## Current Progress
-
-### Phase 1 ✅
-- ESP32 setup
-- DHT22 sensor interfacing
-- Serial Monitor output
-
-### Phase 2 ✅
-- SSD1306 OLED integration
-- Temperature display
-- Humidity display
-
-  ## Features
-
-- Reads temperature and humidity using DHT22
-- Displays readings on SSD1306 OLED
-- Connects to Wi-Fi
-- Uploads sensor data to ThingSpeak
-- Displays HTTP response status in Serial Monitor
-- Updates cloud data every 20 seconds
-
-### Phase 3 🔄
-- ThingSpeak account configured
-- Cloud integration in progress
-
-
+Hari Sahithi Chitrala
