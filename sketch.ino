@@ -16,12 +16,12 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 DHT dht(DHTPIN, DHTTYPE);
 
 // WiFi Credentials
-const char* ssid = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
+const char* ssid = "Wokwi-GUEST";
+const char* password = "";
 
 // ThingSpeak
-String apiKey = "YOUR_WRITE_API_KEY";
-String serverName = "https://api.thingspeak.com/update?api_key=";
+String apiKey = "WRITE API KEY";
+String serverName = "http://api.thingspeak.com/update?api_key=";
 
 void setup() {
 
@@ -39,7 +39,7 @@ void setup() {
   display.setTextSize(1);
 
   // Connect WiFi
-  WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password, 6);
 
   Serial.print("Connecting to WiFi");
 
@@ -97,12 +97,15 @@ void loop() {
 
   // Build URL
   String url = serverName +
-               apiKey +
-               "&field1=" + String(temperature) +
-               "&field2=" + String(humidity);
+             apiKey +
+             "&field1=" + String(temperature) +
+             "&field2=" + String(humidity);
 
-  WiFiClient client;
-  HTTPClient http;
+Serial.println("Uploading to:");
+Serial.println(url);
+
+WiFiClient client;
+HTTPClient http;
 
   http.begin(client, url);
 
